@@ -1,0 +1,89 @@
+/* 由 scripts/build.mjs 从 data/sample-case.json 生成，供 file:// 直接打开时回退使用 */
+window.REFORM_CASE_FALLBACK = {
+  "caseId": "DEMO-001",
+  "title": "模块化工业艺术品",
+  "status": "示例演示，非真实材料记录",
+  "revision": "2026-11-26-demo-1",
+  "materials": [
+    {
+      "id": "MAT-W01",
+      "name": "旧木板",
+      "category": "木材",
+      "dimensions": "400 × 300 × 18 mm（演示值）",
+      "massG": 950,
+      "quantity": 1,
+      "risk": "真实使用前需检查开裂、污染及承载能力",
+      "provenance": "虚构示例"
+    },
+    {
+      "id": "MAT-M01",
+      "name": "旧金属角码",
+      "category": "金属",
+      "dimensions": "40 × 40 × 3 mm（演示值）",
+      "massG": 85,
+      "quantity": 4,
+      "risk": "真实使用前需检查锈蚀与孔位",
+      "provenance": "虚构示例"
+    },
+    {
+      "id": "MAT-E01",
+      "name": "废旧电子外壳",
+      "category": "电子外壳",
+      "dimensions": "120 × 80 × 30 mm（演示值）",
+      "massG": 210,
+      "quantity": 2,
+      "risk": "需拆除电源和电池并完成安全筛查；不可据外观推断成分",
+      "provenance": "虚构示例"
+    },
+    {
+      "id": "MAT-F01",
+      "name": "可复用螺栓",
+      "category": "紧固件",
+      "dimensions": "M4 × 12 mm（演示值）",
+      "massG": 6,
+      "quantity": 6,
+      "risk": "真实使用前需检查螺纹及强度",
+      "provenance": "虚构示例"
+    }
+  ],
+  "plans": [
+    {
+      "id": "PLAN-A",
+      "name": "框架优先",
+      "description": "先固定木板与角码，再安装外壳模块",
+      "requirements": {
+        "MAT-W01": 1,
+        "MAT-M01": 4,
+        "MAT-E01": 2,
+        "MAT-F01": 8
+      },
+      "steps": [
+        "检查材料与工具",
+        "固定木板与角码",
+        "定位电子外壳",
+        "安装并复核紧固件",
+        "人工进行安全与外观检查"
+      ]
+    },
+    {
+      "id": "PLAN-B",
+      "name": "模块优先",
+      "description": "先拼装外壳模块，再连接木质底座",
+      "requirements": {
+        "MAT-W01": 1,
+        "MAT-M01": 2,
+        "MAT-E01": 2,
+        "MAT-F01": 6
+      },
+      "steps": [
+        "检查材料与工具",
+        "组装电子外壳模块",
+        "固定木质底座",
+        "连接角码与模块",
+        "人工进行安全与外观检查"
+      ]
+    }
+  ],
+  "calculation": "gap[id] = max(0, plan.requirements[id] - inventory[id]); feasible = all gaps equal zero",
+  "environmentalNote": "仅展示旧材料复用数量。节碳量须在取得材料成分、质量、工艺能耗及基准情景后计算。"
+};

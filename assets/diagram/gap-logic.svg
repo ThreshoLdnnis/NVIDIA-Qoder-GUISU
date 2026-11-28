@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">方案缺口计算逻辑图解</title>
+  <desc id="d">缺口等于方案需求减去当前库存后取不小于零的值，任意材料缺口大于零则方案判定为存在缺口。图中以 PLAN-A 的四种示例材料演示初始库存下的计算结果。</desc>
+  <rect width="1200" height="520" fill="#0b1118"/>
+  <text x="50" y="42" fill="#e9eff5" font-size="22" font-weight="700">方案缺口计算逻辑 · 与站点运行时一致</text>
+  <text x="50" y="70" fill="#9db0c4" font-size="14">图解（自绘）· 数字取自 data/sample-case.json 的初始库存，页面中会随用户调节实时重算</text>
+
+  <rect x="50" y="88" width="1100" height="52" rx="12" fill="rgba(224,128,58,0.1)" stroke="#e0803a" stroke-opacity="0.5"/>
+  <text x="70" y="120" fill="#f6b279" font-size="15" font-family="ui-monospace, Consolas, monospace">gap[id] = max(0, plan.requirements[id] − inventory[id])　　feasible = 所有 gap === 0</text>
+
+  <g font-size="12">
+    <text x="270" y="172" fill="#9db0c4">长度 = 件数（1 格 ≈ 46 px / 件）</text>
+    <text x="880" y="172" fill="#9db0c4">图例：</text>
+    <rect x="930" y="162" width="16" height="11" fill="rgba(157,176,196,0.25)" stroke="#b9c9da" stroke-dasharray="3 3"/>
+    <text x="952" y="172" fill="#9db0c4">方案需求</text>
+    <rect x="1020" y="162" width="16" height="11" fill="rgba(52,195,159,0.5)" stroke="#34c39f"/>
+    <text x="1042" y="172" fill="#9db0c4">当前库存</text>
+    <text x="1110" y="172" fill="#f0c14b">缺口</text>
+  </g>
+
+  <g>
+    <text x="50" y="212" fill="#e9eff5" font-size="13.5" font-weight="700">旧木板 MAT-W01</text>
+    <rect x="270" y="196" width="46" height="14" fill="rgba(157,176,196,0.25)" stroke="#b9c9da" stroke-dasharray="3 3"/>
+    <rect x="270" y="214" width="46" height="14" fill="rgba(52,195,159,0.5)" stroke="#34c39f"/>
+    <text x="326" y="208" fill="#9db0c4" font-size="12">需 1</text>
+    <text x="326" y="226" fill="#7ee3c4" font-size="12">有 1</text>
+    <text x="700" y="218" fill="#7ee3c4" font-size="13" font-weight="700">齐套</text>
+  </g>
+  <g>
+    <text x="50" y="264" fill="#e9eff5" font-size="13.5" font-weight="700">旧金属角码 MAT-M01</text>
+    <rect x="270" y="248" width="184" height="14" fill="rgba(157,176,196,0.25)" stroke="#b9c9da" stroke-dasharray="3 3"/>
+    <rect x="270" y="266" width="184" height="14" fill="rgba(52,195,159,0.5)" stroke="#34c39f"/>
+    <text x="464" y="260" fill="#9db0c4" font-size="12">需 4</text>
+    <text x="464" y="278" fill="#7ee3c4" font-size="12">有 4</text>
+    <text x="700" y="270" fill="#7ee3c4" font-size="13" font-weight="700">齐套</text>
+  </g>
+  <g>
+    <text x="50" y="316" fill="#e9eff5" font-size="13.5" font-weight="700">废旧电子外壳 MAT-E01</text>
+    <rect x="270" y="300" width="92" height="14" fill="rgba(157,176,196,0.25)" stroke="#b9c9da" stroke-dasharray="3 3"/>
+    <rect x="270" y="318" width="92" height="14" fill="rgba(52,195,159,0.5)" stroke="#34c39f"/>
+    <text x="372" y="312" fill="#9db0c4" font-size="12">需 2</text>
+    <text x="372" y="330" fill="#7ee3c4" font-size="12">有 2</text>
+    <text x="700" y="322" fill="#7ee3c4" font-size="13" font-weight="700">齐套</text>
+  </g>
+  <g>
+    <text x="50" y="368" fill="#e9eff5" font-size="13.5" font-weight="700">可复用螺栓 MAT-F01</text>
+    <rect x="270" y="352" width="368" height="14" fill="rgba(157,176,196,0.25)" stroke="#b9c9da" stroke-dasharray="3 3"/>
+    <rect x="270" y="370" width="276" height="14" fill="rgba(52,195,159,0.5)" stroke="#34c39f"/>
+    <text x="646" y="364" fill="#9db0c4" font-size="12">需 8</text>
+    <text x="554" y="382" fill="#7ee3c4" font-size="12">有 6</text>
+    <text x="700" y="374" fill="#f0c14b" font-size="13" font-weight="700">缺 2 件</text>
+  </g>
+
+  <rect x="50" y="404" width="1100" height="46" rx="12" fill="#111b26" stroke="#24384c"/>
+  <text x="70" y="433" fill="#f0c14b" font-size="13.5" font-weight="700">PLAN-A 框架优先：缺口合计 2 件 → 判定为「存在缺口」，不可行</text>
+  <text x="600" y="433" fill="#7ee3c4" font-size="13.5" font-weight="700">PLAN-B 模块优先：缺口合计 0 → 判定为「当前库存可行」</text>
+
+  <text x="50" y="478" fill="#9db0c4" font-size="12.5">演示动作：把 MAT-F01 可用数量从 6 调到 8，PLAN-A 的缺口标签与顶部汇总立即变为 0，页面不会用写死文案冒充计算结果。</text>
+  <text x="50" y="502" fill="#e0803a" font-size="12.5" font-weight="700">示例演示：以上材料、需求与数量为虚构数据，不代表真实齐套状态或工程可行性。</text>
+</svg>

@@ -6,3 +6,7 @@ Thumbs.db
 !.env.example
 node_modules/
 __pycache__/
+dist/
+.reform-dist-*/
+*.qoder.site
+*.qoder.site.bak

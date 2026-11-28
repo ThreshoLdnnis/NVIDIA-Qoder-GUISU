@@ -1,0 +1,39 @@
+:root {
+  color: #edf2e9;
+  background: #0b100c;
+  font-family: Geist, Inter, system-ui, "Microsoft YaHei", sans-serif;
+  color-scheme: dark;
+  --muted: #aebdaf;
+  --border: #2b372c;
+  --accent: #b9d6a8;
+  --mono: "IBM Plex Mono", Consolas, monospace;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+.viewer { margin-inline: auto; padding: 0 18px 14px; max-width: 1280px; }
+.viewer-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0; }
+.viewer-head h1 { margin: 4px 0 0; font-size: clamp(16px, 2.4vw, 24px); font-weight: 560; letter-spacing: -.035em; }
+.technical, .view-badge { margin: 0; font-family: var(--mono); font-size: 10px; letter-spacing: .11em; color: var(--muted); }
+button { font: inherit; font-size: 12px; border: 1px solid var(--border); color: var(--muted); cursor: pointer; min-height: 35px; border-radius: 999px; background: #141d15; padding: 6px 12px; white-space: nowrap; }
+button:hover { border-color: #879f81; color: #fff; }
+button[aria-pressed="true"] { background: #d7e8cc; color: #122114; border-color: #d7e8cc; }
+button:focus-visible, canvas:focus-visible, input:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.viewport { position: relative; height: clamp(270px, 62vh, 428px); border: 1px solid var(--border); background: #0b100d url("assembly-poster.jpg") center / cover no-repeat; overflow: hidden; }
+canvas { display: block; width: 100%; height: 100%; touch-action: pan-y; cursor: grab; }
+canvas.dragging { cursor: grabbing; }
+.view-badge { position: absolute; top: 14px; left: 14px; padding: 6px 8px; background: #0c140ed9; border: 1px solid #344736; color: #d2e8c9; pointer-events: none; }
+.view-badge span { display: inline-block; height: 5px; width: 5px; border-radius: 50%; box-shadow: 0 0 9px #8aa975; background: #b4d6a0; margin: 0 7px 2px 0; }
+.hint { position: absolute; bottom: 0; left: 0; right: 0; margin: 0; padding: 9px 14px; background: #0c140ed9; color: var(--muted); font-size: 11px; pointer-events: none; }
+.controls { display: grid; grid-template-columns: auto auto minmax(54px, 1fr) auto; gap: 12px; align-items: center; padding: 12px 0; color: var(--muted); font-size: 12px; }
+.controls output { color: #d9eacc; font-family: var(--mono); font-variant-numeric: tabular-nums; min-width: 3ch; text-align: right; }
+.controls input { width: 100%; accent-color: var(--accent); margin: 0; min-width: 0; }
+.components { display: flex; gap: 6px; flex-wrap: wrap; padding-bottom: 4px; }
+.component-info { font-size: 12px; line-height: 1.55; color: #dbe9d8; margin: 6px 0; min-height: 2em; }
+.boundary { border-top: 1px solid var(--border); margin: 8px 0 0; padding: 8px 0 0; font-size: 11px; color: var(--muted); }
+.fallback { width: 100%; }
+@media (max-width: 480px) {
+  .viewer { padding-inline: 11px; }
+  .viewer-head { padding-block: 10px; }
+  .controls { gap: 7px; }
+  button { padding-inline: 8px; }
+}

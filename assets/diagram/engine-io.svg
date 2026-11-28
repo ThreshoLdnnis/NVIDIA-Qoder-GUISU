@@ -1,0 +1,117 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 620" width="1200" height="620" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">三个智能引擎的输入处理输出图解</title>
+  <desc id="d">材料智能中心、AI 设计工作室与数字孪生制造三个引擎，各自列出输入、处理、输出，并区分当前浏览器内演示范围与长期研发目标。</desc>
+  <rect width="1200" height="620" fill="#0b1118"/>
+  <text x="40" y="44" fill="#e9eff5" font-size="22" font-weight="700">三个智能引擎 · 输入 → 处理 → 输出</text>
+  <text x="40" y="74" fill="#9db0c4" font-size="14">图解（自绘）· 右侧一栏区分“当前演示范围”和“长期研发目标”，避免把规划写成已完成能力</text>
+  <text x="1160" y="44" fill="#e0803a" font-size="13" text-anchor="end" font-weight="700">示例演示</text>
+
+  <!-- row 1 -->
+  <g>
+    <rect x="40" y="120" width="190" height="150" rx="12" fill="rgba(224,128,58,0.12)" stroke="#e0803a" stroke-opacity="0.55"/>
+    <text x="58" y="152" fill="#e9eff5" font-size="15" font-weight="700">材料智能中心</text>
+    <text x="58" y="174" fill="#f6b279" font-size="11.5" font-family="ui-monospace, Consolas, monospace">Material</text>
+    <text x="58" y="192" fill="#f6b279" font-size="11.5" font-family="ui-monospace, Consolas, monospace">Intelligence</text>
+    <text x="58" y="210" fill="#f6b279" font-size="11.5" font-family="ui-monospace, Consolas, monospace">Hub</text>
+    <text x="58" y="248" fill="#9db0c4" font-size="12">M-I-H</text>
+
+    <rect x="250" y="120" width="195" height="150" rx="12" fill="#111b26" stroke="#24384c"/>
+    <text x="266" y="148" fill="#34c39f" font-size="12" font-weight="700" font-family="ui-monospace, Consolas, monospace">输入</text>
+    <text x="266" y="174" fill="#9db0c4" font-size="12.5">登记信息 · 来源</text>
+    <text x="266" y="196" fill="#9db0c4" font-size="12.5">尺寸重量 · 数量</text>
+    <text x="266" y="218" fill="#9db0c4" font-size="12.5">照片 · 筛查结论</text>
+
+    <rect x="465" y="120" width="195" height="150" rx="12" fill="#111b26" stroke="#24384c"/>
+    <text x="481" y="148" fill="#34c39f" font-size="12" font-weight="700" font-family="ui-monospace, Consolas, monospace">处理</text>
+    <text x="481" y="174" fill="#9db0c4" font-size="12.5">统一护照结构</text>
+    <text x="481" y="196" fill="#9db0c4" font-size="12.5">置信状态分级</text>
+    <text x="481" y="218" fill="#9db0c4" font-size="12.5">风险规则提示</text>
+
+    <rect x="680" y="120" width="195" height="150" rx="12" fill="#111b26" stroke="#24384c"/>
+    <text x="696" y="148" fill="#34c39f" font-size="12" font-weight="700" font-family="ui-monospace, Consolas, monospace">输出</text>
+    <text x="696" y="174" fill="#9db0c4" font-size="12.5">材料护照</text>
+    <text x="696" y="196" fill="#9db0c4" font-size="12.5">库存视图与数量</text>
+
+    <rect x="895" y="120" width="265" height="150" rx="12" fill="rgba(52,195,159,0.07)" stroke="#24384c" stroke-dasharray="5 5"/>
+    <text x="911" y="148" fill="#7ee3c4" font-size="12" font-weight="700">当前演示（浏览器内）</text>
+    <text x="911" y="170" fill="#9db0c4" font-size="12">读示例 JSON · 渲染护照</text>
+    <text x="911" y="188" fill="#9db0c4" font-size="12">调节库存 · 展示置信状态</text>
+    <text x="911" y="216" fill="#e0803a" font-size="12" font-weight="700">长期研发目标</text>
+    <text x="911" y="238" fill="#9db0c4" font-size="12">图像识别 · 检测数据接入</text>
+    <text x="911" y="256" fill="#9db0c4" font-size="12">条码入库 · 跨批次溯源</text>
+  </g>
+
+  <!-- row 2 -->
+  <g>
+    <rect x="40" y="290" width="190" height="150" rx="12" fill="rgba(224,128,58,0.12)" stroke="#e0803a" stroke-opacity="0.55"/>
+    <text x="58" y="322" fill="#e9eff5" font-size="15" font-weight="700">AI 设计工作室</text>
+    <text x="58" y="344" fill="#f6b279" font-size="11.5" font-family="ui-monospace, Consolas, monospace">AI Design</text>
+    <text x="58" y="362" fill="#f6b279" font-size="11.5" font-family="ui-monospace, Consolas, monospace">Studio</text>
+    <text x="58" y="418" fill="#9db0c4" font-size="12">A-D-S</text>
+
+    <rect x="250" y="290" width="195" height="150" rx="12" fill="#111b26" stroke="#24384c"/>
+    <text x="266" y="318" fill="#34c39f" font-size="12" font-weight="700" font-family="ui-monospace, Consolas, monospace">输入</text>
+    <text x="266" y="344" fill="#9db0c4" font-size="12.5">库存快照</text>
+    <text x="266" y="366" fill="#9db0c4" font-size="12.5">目标产品约束</text>
+    <text x="266" y="388" fill="#9db0c4" font-size="12.5">复用率偏好</text>
+
+    <rect x="465" y="290" width="195" height="150" rx="12" fill="#111b26" stroke="#24384c"/>
+    <text x="481" y="318" fill="#34c39f" font-size="12" font-weight="700" font-family="ui-monospace, Consolas, monospace">处理</text>
+    <text x="481" y="344" fill="#9db0c4" font-size="12.5">需求映射为清单</text>
+    <text x="481" y="366" fill="#9db0c4" font-size="12.5">逐条计算缺口</text>
+    <text x="481" y="388" fill="#9db0c4" font-size="12.5">按可行状态排序</text>
+
+    <rect x="680" y="290" width="195" height="150" rx="12" fill="#111b26" stroke="#24384c"/>
+    <text x="696" y="318" fill="#34c39f" font-size="12" font-weight="700" font-family="ui-monospace, Consolas, monospace">输出</text>
+    <text x="696" y="344" fill="#9db0c4" font-size="12.5">候选方案列表</text>
+    <text x="696" y="366" fill="#9db0c4" font-size="12.5">缺口与不可行原因</text>
+
+    <rect x="895" y="290" width="265" height="150" rx="12" fill="rgba(52,195,159,0.07)" stroke="#24384c" stroke-dasharray="5 5"/>
+    <text x="911" y="318" fill="#7ee3c4" font-size="12" font-weight="700">当前演示（浏览器内）</text>
+    <text x="911" y="340" fill="#9db0c4" font-size="12">两个固定示例方案</text>
+    <text x="911" y="358" fill="#9db0c4" font-size="12">缺口实时重算，无生成模型</text>
+    <text x="911" y="386" fill="#e0803a" font-size="12" font-weight="700">长期研发目标</text>
+    <text x="911" y="408" fill="#9db0c4" font-size="12">生成式设计 · 结构校核</text>
+    <text x="911" y="426" fill="#9db0c4" font-size="12">可制造性评估与评分模型</text>
+  </g>
+
+  <!-- row 3 -->
+  <g>
+    <rect x="40" y="460" width="190" height="150" rx="12" fill="rgba(224,128,58,0.12)" stroke="#e0803a" stroke-opacity="0.55"/>
+    <text x="58" y="492" fill="#e9eff5" font-size="15" font-weight="700">数字孪生制造</text>
+    <text x="58" y="514" fill="#f6b279" font-size="11.5" font-family="ui-monospace, Consolas, monospace">Digital Twin</text>
+    <text x="58" y="532" fill="#f6b279" font-size="11.5" font-family="ui-monospace, Consolas, monospace">Manufacturing</text>
+    <text x="58" y="588" fill="#9db0c4" font-size="12">D-T-M</text>
+
+    <rect x="250" y="460" width="195" height="150" rx="12" fill="#111b26" stroke="#24384c"/>
+    <text x="266" y="488" fill="#34c39f" font-size="12" font-weight="700" font-family="ui-monospace, Consolas, monospace">输入</text>
+    <text x="266" y="514" fill="#9db0c4" font-size="12.5">选定方案</text>
+    <text x="266" y="536" fill="#9db0c4" font-size="12.5">装配顺序 · 工位</text>
+    <text x="266" y="558" fill="#9db0c4" font-size="12.5">人工复核结论</text>
+
+    <rect x="465" y="460" width="195" height="150" rx="12" fill="#111b26" stroke="#24384c"/>
+    <text x="481" y="488" fill="#34c39f" font-size="12" font-weight="700" font-family="ui-monospace, Consolas, monospace">处理</text>
+    <text x="481" y="514" fill="#9db0c4" font-size="12.5">分步展开工单</text>
+    <text x="481" y="536" fill="#9db0c4" font-size="12.5">材料齐套检查</text>
+    <text x="481" y="558" fill="#9db0c4" font-size="12.5">异常与确认留痕</text>
+
+    <rect x="680" y="460" width="195" height="150" rx="12" fill="#111b26" stroke="#24384c"/>
+    <text x="696" y="488" fill="#34c39f" font-size="12" font-weight="700" font-family="ui-monospace, Consolas, monospace">输出</text>
+    <text x="696" y="514" fill="#9db0c4" font-size="12.5">装配工单</text>
+    <text x="696" y="536" fill="#9db0c4" font-size="12.5">产品档案 · 反馈数据</text>
+
+    <rect x="895" y="460" width="265" height="150" rx="12" fill="rgba(52,195,159,0.07)" stroke="#24384c" stroke-dasharray="5 5"/>
+    <text x="911" y="488" fill="#7ee3c4" font-size="12" font-weight="700">当前演示（浏览器内）</text>
+    <text x="911" y="510" fill="#9db0c4" font-size="12">示意预演动画 · 齐套检查</text>
+    <text x="911" y="528" fill="#9db0c4" font-size="12">人工确认勾选 · 档案导出</text>
+    <text x="911" y="556" fill="#e0803a" font-size="12" font-weight="700">长期研发目标</text>
+    <text x="911" y="578" fill="#9db0c4" font-size="12">真实几何与公差 · 工艺仿真</text>
+    <text x="911" y="596" fill="#9db0c4" font-size="12">设备接口与产线数据回流</text>
+  </g>
+
+  <g fill="#34c39f" font-size="16" text-anchor="middle">
+    <text x="240" y="200">›</text><text x="455" y="200">›</text><text x="670" y="200">›</text>
+    <text x="240" y="370">›</text><text x="455" y="370">›</text><text x="670" y="370">›</text>
+    <text x="240" y="540">›</text><text x="455" y="540">›</text><text x="670" y="540">›</text>
+  </g>
+</svg>

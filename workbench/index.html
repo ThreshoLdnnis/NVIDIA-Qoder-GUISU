@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="归塑工作台。检查材料护照、调整库存、比较预设方案、预演装配并导出材料档案。">
+<title>归塑 ReForm | 循环设计工作台</title>
+<link rel="stylesheet" href="../styles.css">
+<link rel="stylesheet" href="workbench.css">
+<script src="app.js" defer></script>
+</head>
+<body class="workbench-page">
+<a class="wb-skip" href="#case">跳至工作台</a>
+<header class="wb-top">
+  <div class="wb-frame wb-nav">
+    <a class="wb-brand" href="../index.html"><strong>归塑 ReForm</strong></a>
+    <nav aria-label="主导航">
+      <a href="../materials.html">材料</a><a href="../design.html">设计</a><a href="../manufacture.html">制造</a><a href="../cases.html">案例</a>
+    </nav>
+    <a class="wb-nav-current" href="./index.html" aria-current="page">工作台</a>
+  </div>
+</header>
+<main id="case" class="wb-frame" tabindex="-1">
+  <header class="wb-intro">
+    <div>
+      <p class="wb-overline">REFORM / WORKBENCH</p>
+      <h1>循环设计工作台</h1>
+      <p class="wb-deck">初始库存只有 6 枚螺栓。试着补齐库存，或选用需要更少紧固件的方案，然后导出你的选择。</p>
+    </div>
+    <dl class="wb-meta">
+      <div><dt>案例</dt><dd id="meta-title">模块化工业艺术品</dd></div>
+      <div><dt>数据来源</dt><dd id="meta-status">虚构示例</dd></div>
+      <div><dt>数据版本</dt><dd id="meta-revision">—</dd></div>
+    </dl>
+  </header>
+
+  <noscript><p class="wb-fatal">材料工作台需要 JavaScript 才能加载数据和计算缺口。</p></noscript>
+  <p id="wb-load-error" class="wb-fatal" role="alert" hidden></p>
+
+  <div class="case-presets" aria-label="案例情景">
+    <span class="wb-overline">快速试验</span>
+    <button type="button" class="btn btn-ghost btn-sm" data-scenario="initial">恢复初始库存</button>
+    <button type="button" class="btn btn-ghost btn-sm" data-scenario="complete">补入 2 枚螺栓</button>
+    <a href="#step-3" class="btn btn-ghost btn-sm">比较两种方案</a>
+    <p id="case-feedback" class="case-feedback" role="status">该案例的改动保存在当前标签页。</p>
+  </div>
+
+  <div class="case-layout">
+    <nav class="step-rail" aria-label="案例步骤导航">
+      <ol id="step-rail">
+        <li><a href="#step-1" class="rail-link"><span class="rail-num">01</span>材料护照</a></li>
+        <li><a href="#step-2" class="rail-link"><span class="rail-num">02</span>修改库存</a></li>
+        <li><a href="#step-3" class="rail-link"><span class="rail-num">03</span>方案与缺口</a></li>
+        <li><a href="#step-4" class="rail-link"><span class="rail-num">04</span>装配预演</a></li>
+        <li><a href="#step-5" class="rail-link"><span class="rail-num">05</span>档案导出</a></li>
+      </ol>
+    </nav>
+    <div class="step-panels">
+
+
+        <!-- STEP 1 -->
+        <section class="panel" id="step-1" aria-labelledby="s1-title">
+          <div class="panel-head">
+            <h3 id="s1-title"><span class="num-badge">1</span> 材料护照 · 示例演示</h3>
+            <p class="panel-desc">每件示例材料的唯一编号、来源、尺寸、质量和当前可用数量。所有记录均使用虚构材料及示例测量值。</p>
+          </div>
+          <div class="passport-grid" id="passport-list"></div>
+          <details class="callout wb-disclosure">
+            <summary class="callout-title">数据来源与复核说明</summary>
+            <ul>
+              <li><strong>虚构示例</strong>：该条记录由需求文档构造，用于说明字段结构，不对应任何实物。</li>
+              <li><strong>待补证据</strong>：真实使用前需要照片、测量记录、成分或安全筛查结论。</li>
+              <li>外观不能推断成分：电子外壳的塑料类别、木材处理方式等必须检测后才能登记。</li>
+            </ul>
+          </details>
+        </section>
+
+        <!-- STEP 2 -->
+        <section class="panel" id="step-2" hidden aria-labelledby="s2-title">
+          <div class="panel-head">
+            <h3 id="s2-title"><span class="num-badge">2</span> 修改库存</h3>
+            <p class="panel-desc">用 <kbd>+</kbd> / <kbd>−</kbd> 或直接输入数量调整任意示例材料，右侧汇总与步骤 3 的方案状态即时刷新。数据仅保存在当前浏览器会话中。</p>
+          </div>
+          <div class="inv-layout">
+            <div class="inv-controls">
+              <table class="inv-table">
+                <caption class="sr-only">示例材料库存调节表</caption>
+                <thead>
+                  <tr><th scope="col">材料</th><th scope="col">类别</th><th scope="col">单件演示重量</th><th scope="col">可用数量</th></tr>
+                </thead>
+                <tbody id="inventory-rows"></tbody>
+                <tfoot>
+                  <tr><th scope="row" colspan="2">合计</th><td id="inv-mass-total">—</td><td id="inv-qty-total">—</td></tr>
+                </tfoot>
+              </table>
+              <div class="inv-actions">
+                <button type="button" class="btn btn-ghost" id="reset-case">重置为初始案例</button>
+                <p class="micro-note" id="storage-note">本标签页内自动保存，刷新后可继续。关闭标签页前请导出档案。</p>
+              </div>
+            </div>
+            <aside class="live-summary" aria-live="polite" aria-atomic="true">
+              <p class="micro-label">实时计算结果</p>
+              <dl class="summary-list">
+                <div><dt>可用材料总量</dt><dd id="sum-qty">—</dd></div>
+                <div><dt>可用材料总重（演示值）</dt><dd id="sum-mass">—</dd></div>
+                <div><dt>数量齐套方案</dt><dd id="sum-feasible">—</dd></div>
+                <div><dt>所选方案缺口</dt><dd id="sum-gap">—</dd></div>
+              </dl>
+              <p class="micro-note">缺口 = <span lang="en">max(0, 方案需求 − 当前库存)</span>，逐条材料计算后求和。</p>
+            </aside>
+          </div>
+        </section>
+
+        <!-- STEP 3 -->
+        <section class="panel" id="step-3" hidden aria-labelledby="s3-title">
+          <div class="panel-head">
+            <h3 id="s3-title"><span class="num-badge">3</span> 比较方案与缺口</h3>
+            <p class="panel-desc">对照两份预设物料清单。每个缺口由当前库存即时计算。</p>
+          </div>
+          <div class="plan-grid" id="plan-list"></div>
+          <div class="callout callout-slim">
+            <p><span class="badge badge-demo">示例演示</span> 默认高亮方案是演示选择，不代表工程推荐；真实方案需要结构、载荷与安全评估后才能排序。</p>
+          </div>
+        </section>
+
+        <!-- STEP 4 -->
+        <section class="panel" id="step-4" hidden aria-labelledby="s4-title">
+          <div class="panel-head">
+            <h3 id="s4-title"><span class="num-badge">4</span> 装配预演</h3>
+            <p class="panel-desc">依所选方案查看装配顺序、所需材料与人工检查项。</p>
+          </div>
+          <div class="asm-layout">
+            <figure class="asm-stage">
+              <svg viewBox="0 0 420 300" role="img" aria-labelledby="asm-svg-title asm-svg-desc" id="asm-svg">
+                <title id="asm-svg-title">装配示意预演图</title>
+                <desc id="asm-svg-desc">深色背景上的示意图：木板底座、金属角码、两个电子外壳与紧固件随装配步骤逐层出现，仅表达顺序，不代表受力或公差。</desc>
+                <g class="asm-layer" data-layer="1">
+                  <rect x="18" y="18" width="384" height="264" rx="10" class="asm-guide"/>
+                  <text x="30" y="42" class="asm-text">工作台 / 材料就位</text>
+                  <rect x="40" y="60" width="86" height="52" rx="4" class="shape-wood ghost"/>
+                  <rect x="150" y="66" width="40" height="40" rx="3" class="shape-metal ghost"/>
+                  <rect x="205" y="66" width="40" height="40" rx="3" class="shape-metal ghost"/>
+                  <rect x="262" y="62" width="70" height="48" rx="4" class="shape-shell ghost"/>
+                  <circle cx="360" cy="86" r="9" class="shape-bolt ghost"/>
+                  <circle cx="380" cy="86" r="9" class="shape-bolt ghost"/>
+                </g>
+                <g class="asm-layer" data-layer="2">
+                  <rect x="120" y="150" width="180" height="112" rx="6" class="shape-wood"/>
+                  <path d="M120 150 h34 M266 150 h34" class="asm-edge"/>
+                  <rect x="120" y="150" width="24" height="24" rx="3" class="shape-metal"/>
+                  <rect x="276" y="150" width="24" height="24" rx="3" class="shape-metal"/>
+                  <rect x="120" y="238" width="24" height="24" rx="3" class="shape-metal"/>
+                  <rect x="276" y="238" width="24" height="24" rx="3" class="shape-metal"/>
+                </g>
+                <g class="asm-layer" data-layer="3">
+                  <rect x="168" y="176" width="84" height="60" rx="5" class="shape-shell"/>
+                  <rect x="262" y="176" width="46" height="42" rx="5" class="shape-shell"/>
+                </g>
+                <g class="asm-layer" data-layer="4">
+                  <circle cx="176" cy="184" r="5" class="shape-bolt"/>
+                  <circle cx="244" cy="184" r="5" class="shape-bolt"/>
+                  <circle cx="176" cy="228" r="5" class="shape-bolt"/>
+                  <circle cx="244" cy="228" r="5" class="shape-bolt"/>
+                  <circle cx="270" cy="184" r="4.5" class="shape-bolt"/>
+                  <circle cx="300" cy="184" r="4.5" class="shape-bolt"/>
+                  <circle cx="270" cy="210" r="4.5" class="shape-bolt"/>
+                  <circle cx="300" cy="210" r="4.5" class="shape-bolt"/>
+                </g>
+                <g class="asm-layer" data-layer="5">
+                  <path d="M96 268 l10 10 l20 -22" class="asm-check"/>
+                  <text x="140" y="282" class="asm-text">人工复核：外观 / 紧固 / 锐边</text>
+                </g>
+              </svg>
+              <figcaption><span class="badge badge-demo">示意预演</span> 用于说明装配先后顺序。</figcaption>
+            </figure>
+            <div class="asm-side">
+              <ol class="asm-steps" id="asm-steps"></ol>
+              <div class="asm-controls">
+                <button type="button" class="btn btn-ghost btn-sm" id="asm-prev">上一装配步</button>
+                <button type="button" class="btn btn-primary btn-sm" id="asm-next">下一装配步</button>
+                <button type="button" class="btn btn-ghost btn-sm" id="asm-play" aria-pressed="false">自动播放</button>
+              </div>
+              <div class="asm-progress" role="group" aria-label="装配进度">
+                <div class="progress-bar"><span id="asm-progress" style="transform:scaleX(0)"></span></div>
+                <p class="micro-note" id="asm-progress-text">步骤 0 / 5</p>
+              </div>
+              <div class="asm-detail" id="asm-detail" aria-live="polite"></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- STEP 5 -->
+        <section class="panel" id="step-5" hidden aria-labelledby="s5-title">
+          <div class="panel-head">
+            <h3 id="s5-title"><span class="num-badge">5</span> 档案导出</h3>
+            <p class="panel-desc">导出内容与当前画面完全一致：包含时间、案例版本、当前库存、所选方案、逐条缺口、风险声明与状态标签。</p>
+          </div>
+          <div id="archive-summary" class="archive-summary"></div><details class="change-history" open><summary>本次修改记录</summary><ol id="revision-list"></ol></details><div class="export-layout">
+            <div class="export-actions">
+              <button type="button" class="btn btn-primary" id="export-json">下载案例档案 JSON</button>
+              <button type="button" class="btn btn-ghost" id="export-html">下载可打印档案 HTML</button>
+              <p class="micro-note" id="export-check" role="status">未导出。点击按钮后会校验导出内容与画面数值是否一致。</p>
+            </div>
+            <details class="code-block code-compact"><summary>查看完整档案数据</summary>
+              <p class="code-label">导出内容预览 <span class="badge badge-demo">示例演示</span></p>
+              <pre><code id="export-preview">// 等待载入当前状态…</code></pre>
+            </details>
+          </div>
+        </section>
+
+
+    </div>
+  </div>
+
+  <details class="wb-code" id="code">
+    <summary><span>运行数据与计算规则</span><span class="wb-overline">JSON / JAVASCRIPT</span></summary>
+    <div class="tablist" role="tablist" aria-label="代码展示区切换">
+      <button type="button" role="tab" id="tab-passport" class="tab" aria-selected="true" aria-controls="pane-passport">材料护照 JSON</button>
+      <button type="button" role="tab" id="tab-gap" class="tab" aria-selected="false" aria-controls="pane-gap" tabindex="-1">库存缺口函数</button>
+    </div>
+    <section role="tabpanel" id="pane-passport" class="tab-pane" aria-labelledby="tab-passport" tabindex="0">
+      <div class="code-block">
+        <p class="code-label">运行时加载的示例材料记录及其当前数量</p>
+        <pre tabindex="0" aria-label="材料护照代码"><code id="code-passport">等待载入示例数据</code></pre>
+      </div>
+    </section>
+    <section role="tabpanel" id="pane-gap" class="tab-pane" aria-labelledby="tab-gap" tabindex="0" hidden>
+      <div class="code-block">
+        <p class="code-label">工作台使用的运行时函数</p>
+        <pre tabindex="0" aria-label="库存缺口代码"><code id="code-gap">等待载入运行时代码</code></pre>
+      </div>
+      <p class="micro-note" id="code-rule"></p>
+    </section>
+  </details>
+</main>
+<footer class="wb-footer">
+  <div class="wb-frame"><a class="wb-brand" href="../index.html"><strong>归塑 ReForm</strong></a><p>Hack4Good · 循环材料再设计</p><a href="../cases.html">查看产品案例</a></div>
+</footer>
+</body>
+</html>

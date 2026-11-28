@@ -1,0 +1,17 @@
+{
+  "name": "nvidia-qoder-guisu",
+  "version": "0.3.0",
+  "private": true,
+  "type": "module",
+  "description": "归塑 ReForm 循环材料再设计展厅与交互工作台",
+  "scripts": {
+    "dev": "node scripts/serve.mjs --source",
+    "build": "node scripts/build.mjs",
+    "serve": "node scripts/serve.mjs",
+    "check:workbench": "node scripts/check-workbench.mjs",
+    "test": "npm run build && npm run check:workbench"
+  },
+  "devDependencies": {
+    "jsdom": "^31.0.1"
+  }
+}

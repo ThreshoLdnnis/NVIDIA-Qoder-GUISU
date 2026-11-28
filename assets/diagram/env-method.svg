@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 520" width="1200" height="520" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">环保价值核算方法图解</title>
+  <desc id="d">环保价值核算依次需要确定核算边界、设定基准情景、采集活动数据、选取排放因子并做对比与敏感性分析；图中列出所需证据与明确不做的声明，不含任何结果数值。</desc>
+  <rect width="1200" height="520" fill="#0b1118"/>
+  <text x="50" y="42" fill="#e9eff5" font-size="22" font-weight="700">环保价值：方法与待测指标（不含结果数字）</text>
+  <text x="50" y="70" fill="#9db0c4" font-size="14">图解（自绘）· 主张限于“延长可用材料寿命、减少新材料需求”的潜力，量化必须完成以下步骤后才成立</text>
+
+  <g>
+    <rect x="50" y="100" width="212" height="76" rx="12" fill="#111b26" stroke="#34c39f" stroke-opacity="0.45"/>
+    <text x="66" y="128" fill="#34c39f" font-size="12" font-family="ui-monospace, Consolas, monospace">STEP 1</text>
+    <text x="66" y="150" fill="#e9eff5" font-size="14" font-weight="700">确定核算边界</text>
+    <text x="66" y="168" fill="#9db0c4" font-size="11.5">收集 · 运输 · 再加工 · 寿命</text>
+
+    <rect x="272" y="100" width="212" height="76" rx="12" fill="#111b26" stroke="#34c39f" stroke-opacity="0.45"/>
+    <text x="288" y="128" fill="#34c39f" font-size="12" font-family="ui-monospace, Consolas, monospace">STEP 2</text>
+    <text x="288" y="150" fill="#e9eff5" font-size="14" font-weight="700">设定基准情景</text>
+    <text x="288" y="168" fill="#9db0c4" font-size="11.5">同功能新材料对照</text>
+
+    <rect x="494" y="100" width="212" height="76" rx="12" fill="#111b26" stroke="#34c39f" stroke-opacity="0.45"/>
+    <text x="510" y="128" fill="#34c39f" font-size="12" font-family="ui-monospace, Consolas, monospace">STEP 3</text>
+    <text x="510" y="150" fill="#e9eff5" font-size="14" font-weight="700">采集活动数据</text>
+    <text x="510" y="168" fill="#9db0c4" font-size="11.5">质量 · 能耗 · 里程 · 返工</text>
+
+    <rect x="716" y="100" width="212" height="76" rx="12" fill="#111b26" stroke="#34c39f" stroke-opacity="0.45"/>
+    <text x="732" y="128" fill="#34c39f" font-size="12" font-family="ui-monospace, Consolas, monospace">STEP 4</text>
+    <text x="732" y="150" fill="#e9eff5" font-size="14" font-weight="700">选取排放因子</text>
+    <text x="732" y="168" fill="#9db0c4" font-size="11.5">标注出处与年份</text>
+
+    <rect x="938" y="100" width="212" height="76" rx="12" fill="rgba(52,195,159,0.1)" stroke="#34c39f" stroke-opacity="0.6"/>
+    <text x="954" y="128" fill="#34c39f" font-size="12" font-family="ui-monospace, Consolas, monospace">STEP 5</text>
+    <text x="954" y="150" fill="#e9eff5" font-size="14" font-weight="700">对比与敏感性</text>
+    <text x="954" y="168" fill="#9db0c4" font-size="11.5">寿命延长 · 替代率区间</text>
+  </g>
+  <g fill="#34c39f" font-size="15" text-anchor="middle">
+    <text x="266" y="145">›</text><text x="488" y="145">›</text><text x="710" y="145">›</text><text x="932" y="145">›</text>
+  </g>
+
+  <g>
+    <rect x="50" y="206" width="540" height="230" rx="14" fill="#111b26" stroke="#24384c"/>
+    <text x="70" y="238" fill="#e9eff5" font-size="15" font-weight="700">待测指标（全部标注为待采集）</text>
+    <text x="70" y="268" fill="#9db0c4" font-size="12.5">· 复用材料干重 — 称重记录：工具 / 单位 / 测量人 / 日期</text>
+    <text x="70" y="292" fill="#9db0c4" font-size="12.5">· 材料成分与表面处理 — 检测报告或供应商声明</text>
+    <text x="70" y="316" fill="#9db0c4" font-size="12.5">· 清洁与再加工能耗 — 设备功率 × 运行时间</text>
+    <text x="70" y="340" fill="#9db0c4" font-size="12.5">· 运输距离与方式 — 行程与载具记录</text>
+    <text x="70" y="364" fill="#9db0c4" font-size="12.5">· 使用寿命与返工率 — 跟踪观察与售后记录</text>
+    <text x="70" y="388" fill="#9db0c4" font-size="12.5">· 可替代的新材料数量 — 同功能对照方案用料清单</text>
+    <text x="70" y="418" fill="#f0c14b" font-size="12.5">示例数据中的重量为演示值，不可用于核算。</text>
+  </g>
+  <g>
+    <rect x="610" y="206" width="540" height="230" rx="14" fill="#111b26" stroke="#24384c"/>
+    <text x="630" y="238" fill="#e9eff5" font-size="15" font-weight="700">站点现在只说这一句</text>
+    <text x="630" y="268" fill="#7ee3c4" font-size="13">复用旧材料 = 延长可用材料寿命 + 减少新材料需求（潜力方向）</text>
+    <text x="630" y="300" fill="#e9eff5" font-size="14" font-weight="700">明确不做</text>
+    <text x="630" y="326" fill="#9db0c4" font-size="12.5">× 展示“减少 X kg CO₂e”这类未经计算的数字</text>
+    <text x="630" y="350" fill="#9db0c4" font-size="12.5">× 把演示重量当作实测值、把演示复用率当作回收率</text>
+    <text x="630" y="374" fill="#9db0c4" font-size="12.5">× 宣称已获认证、完成生命周期评价或第三方核验</text>
+    <text x="630" y="406" fill="#9db0c4" font-size="12.5">取得实测数据后，再在本节补充核算报告与不确定性区间。</text>
+  </g>
+
+  <text x="50" y="468" fill="#e0803a" font-size="12.5" font-weight="700">示例演示：本页描述的是方法，不代表已完成任何环境效益核算。</text>
+  <text x="50" y="496" fill="#9db0c4" font-size="12.5">与示例数据的对应关系：案例 JSON 中的 environmentalNote 字段随档案一同导出，避免导出件被脱离上下文引用。</text>
+</svg>

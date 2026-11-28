@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark">
+  <title>归塑三维装配 · 概念构型</title>
+  <link rel="stylesheet" href="viewer.css">
+  <script defer src="scene.js"></script>
+  <script defer src="viewer.js"></script>
+</head>
+<body>
+  <main class="viewer">
+    <header class="viewer-head">
+      <div>
+        <p class="technical">DEMO-001 / PLAN A</p>
+        <h1>框架优先 · 三维拆解</h1>
+      </div>
+      <button id="reset-view" type="button">重置视角</button>
+    </header>
+    <div class="viewport">
+      <canvas id="assembly-canvas" tabindex="0" aria-label="框架优先方案三维模型" aria-describedby="canvas-hint">
+        <img src="assembly-poster.jpg" alt="回收木质底座、金属角码、两件外壳与螺栓的概念拆解图">
+      </canvas>
+      <div class="view-badge" aria-hidden="true"><span></span> CONCEPT GEOMETRY</div>
+      <p id="canvas-hint" class="hint">拖动或方向键旋转 · 聚焦画布后用滚轮或 + / − 缩放</p>
+    </div>
+    <div class="controls">
+      <button id="play-motion" type="button" aria-pressed="false">播放拆装</button>
+      <label for="explode-slider">拆解程度</label>
+      <input id="explode-slider" type="range" min="0" max="100" value="72">
+      <output id="explode-value" for="explode-slider">72%</output>
+    </div>
+    <div id="components" class="components" role="group" aria-label="检视构型部件">
+      <button type="button" data-component="all" aria-pressed="true">全部</button>
+    </div>
+    <p id="component-info" class="component-info" aria-live="polite">框架优先方案包含 1 件木质底座、4 件角码、2 件金属外壳和 8 件螺栓。</p>
+    <p class="boundary">三维概念几何 · 用于解释部件关系，不提供加工尺寸、公差或物理仿真结果。</p>
+    <noscript><img class="fallback" src="assembly-poster.jpg" alt="归塑零件概念拆解示意"></noscript>
+  </main>
+</body>
+</html>

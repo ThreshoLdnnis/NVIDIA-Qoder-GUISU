@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 560" width="1200" height="560" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">四类数据积累路径图解</title>
+  <desc id="d">材料数据、设计数据、制造数据与产品数据在真实项目中逐轮积累，末端的产品反馈回流到材料与方案库形成闭环；图中说明当前四类数据的记录数量为零。</desc>
+  <rect width="1200" height="560" fill="#0b1118"/>
+  <text x="50" y="42" fill="#e9eff5" font-size="22" font-weight="700">数据积累路径 · 壁垒是跑出来的，不是画出来的</text>
+  <text x="50" y="70" fill="#9db0c4" font-size="14">图解（自绘）· 顺时针为积累顺序；四类数据当前的真实记录数量均为 0，仅有本演示的虚构示例</text>
+
+  <g stroke="#34c39f" stroke-opacity="0.55" stroke-width="1.6" fill="none">
+    <path d="M560 185 h80"/><path d="M1000 250 v60"/>
+    <path d="M640 375 h-80"/><path d="M200 310 v-60"/>
+  </g>
+  <g fill="#34c39f" fill-opacity="0.75">
+    <path d="M640 179 l12 6 -12 6 z"/><path d="M1006 310 v12 l-6 -12 z"/>
+    <path d="M560 369 l-12 6 12 6 z"/><path d="M194 250 v-12 l6 12 z"/>
+  </g>
+  <rect x="600" y="255" width="200" height="50" rx="25" fill="rgba(52,195,159,0.12)" stroke="#34c39f" stroke-opacity="0.5"/>
+  <text x="700" y="286" fill="#7ee3c4" font-size="14" font-weight="700" text-anchor="middle">闭环反馈</text>
+
+  <g>
+    <rect x="60" y="110" width="480" height="145" rx="14" fill="#111b26" stroke="#24384c"/>
+    <text x="80" y="142" fill="#e0803a" font-size="12" font-family="ui-monospace, Consolas, monospace">DATA · 01</text>
+    <text x="80" y="168" fill="#e9eff5" font-size="16" font-weight="700">材料数据</text>
+    <text x="80" y="194" fill="#9db0c4" font-size="12.5">来源与授权凭证 · 原始照片 · 测量与检测 · 缺陷与失效记录</text>
+    <text x="80" y="216" fill="#9db0c4" font-size="12.5">积累方式：真实材料试点逐项登记，一次录入长期复用</text>
+    <text x="80" y="240" fill="#f0c14b" font-size="12.5" font-weight="700">当前：0 条真实记录（仅 4 类虚构示例）</text>
+  </g>
+  <g>
+    <rect x="660" y="110" width="480" height="145" rx="14" fill="#111b26" stroke="#24384c"/>
+    <text x="680" y="142" fill="#e0803a" font-size="12" font-family="ui-monospace, Consolas, monospace">DATA · 02</text>
+    <text x="680" y="168" fill="#e9eff5" font-size="16" font-weight="700">设计数据</text>
+    <text x="680" y="194" fill="#9db0c4" font-size="12.5">需求约束 · 候选方案 · 修改前后对照与原因 · 被否决方案</text>
+    <text x="680" y="216" fill="#9db0c4" font-size="12.5">积累方式：与设计方共建项目，把取舍过程一并存档</text>
+    <text x="680" y="240" fill="#f0c14b" font-size="12.5" font-weight="700">当前：0 个真实方案（2 个示例方案）</text>
+  </g>
+  <g>
+    <rect x="660" y="340" width="480" height="145" rx="14" fill="#111b26" stroke="#24384c"/>
+    <text x="680" y="372" fill="#e0803a" font-size="12" font-family="ui-monospace, Consolas, monospace">DATA · 03</text>
+    <text x="680" y="398" fill="#e9eff5" font-size="16" font-weight="700">制造数据</text>
+    <text x="680" y="424" fill="#9db0c4" font-size="12.5">装配耗时 · 工具与工装 · 误差与返工 · 人工复核结论</text>
+    <text x="680" y="446" fill="#9db0c4" font-size="12.5">积累方式：工程验证阶段逐单记录，失败同样入库</text>
+    <text x="680" y="470" fill="#f0c14b" font-size="12.5" font-weight="700">当前：0 份工单</text>
+  </g>
+  <g>
+    <rect x="60" y="340" width="480" height="145" rx="14" fill="#111b26" stroke="#24384c"/>
+    <text x="80" y="372" fill="#e0803a" font-size="12" font-family="ui-monospace, Consolas, monospace">DATA · 04</text>
+    <text x="80" y="398" fill="#e9eff5" font-size="16" font-weight="700">产品数据</text>
+    <text x="80" y="424" fill="#9db0c4" font-size="12.5">使用寿命 · 维护记录 · 拆解与回收反馈</text>
+    <text x="80" y="446" fill="#9db0c4" font-size="12.5">积累方式：交付后跟踪，周期最长但最能验证环保结论</text>
+    <text x="80" y="470" fill="#f0c14b" font-size="12.5" font-weight="700">当前：0 件交付</text>
+  </g>
+
+  <text x="50" y="522" fill="#9db0c4" font-size="12.5">假设：可被审计的材料数据（来源可查、授权可用、失败被记录、反馈能回流）会随项目数量复利增长，并让后续方案更准。</text>
+  <text x="50" y="546" fill="#e0803a" font-size="12.5" font-weight="700">事实边界：该假设尚未验证。本站不将任何数据规模描述为既有竞争壁垒。</text>
+</svg>

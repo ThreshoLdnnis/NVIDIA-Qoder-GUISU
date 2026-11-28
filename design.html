@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#080b09"><meta name="description" content="体验库存变化如何影响两种设计方案的螺栓缺口。">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="styles.css"><title>AI 设计工作室 · 归塑 ReForm</title><script defer src="site.js"></script></head>
+<body><a class="skip-link" href="#content">跳至正文</a>
+<header class="site-header"><div class="site-inner">
+  <a class="brand" href="index.html"><span class="brand-mark">R<span>F</span></span><span>归塑 <b>ReForm</b></span></a>
+  <button class="mobile-menu" type="button" aria-expanded="false" aria-controls="site-nav">菜单</button>
+  <nav id="site-nav" class="site-nav" aria-label="主导航"><a href="index.html">首页</a><a href="materials.html">材料智能</a><a href="design.html" aria-current="page">AI 设计</a><a href="manufacture.html">制造流程</a><a href="cases.html">产品案例</a></nav>
+  <a class="btn btn-header" href="workbench/index.html">体验工作台</a>
+</div></header><main id="content"><section class="site-inner page-lead"><div><p class="micro">DESIGN STUDIO</p><h1>AI 设计工作室</h1><p class="lede">从用途、现有库存和允许的工艺出发，把候选方案转成可比较的用料清单。当前版本以两套预设方案和浏览器规则展示设计机制。</p></div><a class="btn" href="workbench/index.html#step-3">打开完整比较</a></section>
+<section class="site-inner split feature-split">
+ <figure class="media-figure"><img src="assets/img/design-studio.jpg" alt="冷光下的材料再造方案与工业构型设计概念" loading="lazy"><figcaption>概念图 · 基于材料约束的设计工作台</figcaption></figure>
+ <div class="inspector panel"><p class="micro">CONSTRAINT COMPARISON</p><h2>一次只改变一个条件。</h2><div class="segmented" role="group" aria-label="选择用料方案"><button type="button" data-plan="PLAN-A" aria-pressed="true">框架优先</button><button type="button" data-plan="PLAN-B" aria-pressed="false">模块优先</button></div>
+ <p id="plan-explanation" class="quiet">先固定木板与角码，再安装外壳模块。</p>
+ <label class="slider-label" for="bolt-slider">可用螺栓 <output id="bolt-value" for="bolt-slider">6 枚</output></label><input type="range" id="bolt-slider" min="0" max="10" step="1" value="6">
+ <div class="readout trio" aria-live="polite"><div><span>需要</span><strong id="bolt-required">8</strong></div><div><span>可用</span><strong id="bolt-available">6</strong></div><div><span>缺口</span><strong id="bolt-gap">2</strong></div></div>
+ <p class="quiet" id="plan-note">螺栓数量差额 2 枚，需补料或换方案。其他部件按初始示例库存。</p></div>
+</section>
+<section class="site-inner detail-section"><div class="section-head"><div><p class="micro">DESIGN REVIEW</p><h2>把设计理由留在数据里。</h2></div></div>
+<div class="line-grid three"><article><h3>固定输入</h3><p>保存用途、材料快照、允许工艺及设计版本。</p></article><article><h3>逐项校验</h3><p>按材料编号核对数量，列出缺口与差异。</p></article><article><h3>人工审核</h3><p>结构、配合及加工条件进入后续工程复核。</p></article></div>
+<details class="disclosure"><summary>查看工作台缺口校验逻辑</summary><pre><code>gap = Math.max(0, required - available);
+inventorySatisfied = gaps.every(gap => gap === 0);</code></pre><p>上述为规则简写，完整计算及数据见工作台与公开源码。</p></details></section><div class="site-inner module-more"><span class="micro">CONTINUE THE LOOP</span><a class="btn" href="manufacture.html">制造与装配</a><a class="btn" href="workbench/index.html">进入工作台</a></div></main><footer class="site-footer"><div class="site-inner footer-inner"><div><a class="brand" href="index.html"><span class="brand-mark">R<span>F</span></span><span>归塑 <b>ReForm</b></span></a><p>以可追溯的材料数据，连接循环设计与制造。</p></div><div class="footer-links"><a href="workbench/index.html">交互工作台</a><a href="docs/project-plan.html">项目规划书</a><a href="https://github.com/ThreshoLdnnis/NVIDIA-Qoder-GUISU">GitHub</a></div><span class="micro">HACK4GOOD / 环保议题 · 阶段原型</span></div></footer></body></html>

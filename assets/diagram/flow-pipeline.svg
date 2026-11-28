@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="1200" height="420" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">五段业务流程图解</title>
+  <desc id="d">材料采集与安全筛查、材料护照及库存、方案与工程设计、装配预演与人工复核、制作档案与反馈五个环节依次连接，并标注当前演示状态。</desc>
+  <rect width="1200" height="420" fill="#0b1118"/>
+  <text x="50" y="46" fill="#e9eff5" font-size="22" font-weight="700">五段业务流程 · 归塑 ReForm</text>
+  <text x="50" y="76" fill="#9db0c4" font-size="14">图解（自绘，非实拍）· 当前站点在浏览器内演示第 2—5 段的规则逻辑；第 1 段没有真实采集记录</text>
+
+  <g stroke="#24384c" stroke-width="1.5">
+    <path d="M250 210 h25 M475 210 h25 M700 210 h25 M925 210 h25"/>
+  </g>
+  <g fill="#e0803a">
+    <path d="M275 204 l12 6 -12 6 z"/><path d="M500 204 l12 6 -12 6 z"/>
+    <path d="M725 204 l12 6 -12 6 z"/><path d="M950 204 l12 6 -12 6 z"/>
+  </g>
+
+  <g>
+    <rect x="50" y="110" width="200" height="200" rx="14" fill="#111b26" stroke="#24384c"/>
+    <text x="66" y="144" fill="#e0803a" font-size="20" font-weight="700" font-family="ui-monospace, Consolas, monospace">01</text>
+    <text x="66" y="172" fill="#e9eff5" font-size="15.5" font-weight="700">材料采集</text>
+    <text x="66" y="192" fill="#e9eff5" font-size="15.5" font-weight="700">与安全筛查</text>
+    <text x="66" y="218" fill="#9db0c4" font-size="12">输入：来源、批次、外观</text>
+    <text x="66" y="238" fill="#9db0c4" font-size="12">输出：可入库候选清单</text>
+    <text x="66" y="258" fill="#9db0c4" font-size="12">电子外壳须拆电源电池</text>
+    <rect x="66" y="270" width="130" height="26" rx="13" fill="rgba(157,176,196,0.08)" stroke="#24384c"/>
+    <text x="131" y="288" fill="#9db0c4" font-size="12" text-anchor="middle">未演示</text>
+  </g>
+  <g>
+    <rect x="275" y="110" width="200" height="200" rx="14" fill="#111b26" stroke="#24384c"/>
+    <text x="291" y="144" fill="#e0803a" font-size="20" font-weight="700" font-family="ui-monospace, Consolas, monospace">02</text>
+    <text x="291" y="172" fill="#e9eff5" font-size="15.5" font-weight="700">材料护照</text>
+    <text x="291" y="192" fill="#e9eff5" font-size="15.5" font-weight="700">及库存</text>
+    <text x="291" y="218" fill="#9db0c4" font-size="12">ID / 来源 / 类型 / 规格</text>
+    <text x="291" y="238" fill="#9db0c4" font-size="12">数量 / 风险 / 置信状态</text>
+    <text x="291" y="258" fill="#9db0c4" font-size="12">输出：可检索库存</text>
+    <rect x="291" y="270" width="130" height="26" rx="13" fill="rgba(224,128,58,0.14)" stroke="#e0803a" stroke-opacity="0.5"/>
+    <text x="356" y="288" fill="#f6b279" font-size="12" text-anchor="middle">已演示</text>
+  </g>
+  <g>
+    <rect x="500" y="110" width="200" height="200" rx="14" fill="#111b26" stroke="#24384c"/>
+    <text x="516" y="144" fill="#e0803a" font-size="20" font-weight="700" font-family="ui-monospace, Consolas, monospace">03</text>
+    <text x="516" y="172" fill="#e9eff5" font-size="15.5" font-weight="700">方案与工程</text>
+    <text x="516" y="192" fill="#e9eff5" font-size="15.5" font-weight="700">设计</text>
+    <text x="516" y="218" fill="#9db0c4" font-size="12">输入：库存 + 目标约束</text>
+    <text x="516" y="238" fill="#9db0c4" font-size="12">输出：候选方案 + 缺口</text>
+    <text x="516" y="258" fill="#9db0c4" font-size="12">规则计算，非生成模型</text>
+    <rect x="516" y="270" width="130" height="26" rx="13" fill="rgba(224,128,58,0.14)" stroke="#e0803a" stroke-opacity="0.5"/>
+    <text x="581" y="288" fill="#f6b279" font-size="12" text-anchor="middle">已演示</text>
+  </g>
+  <g>
+    <rect x="725" y="110" width="200" height="200" rx="14" fill="#111b26" stroke="#24384c"/>
+    <text x="741" y="144" fill="#e0803a" font-size="20" font-weight="700" font-family="ui-monospace, Consolas, monospace">04</text>
+    <text x="741" y="172" fill="#e9eff5" font-size="15.5" font-weight="700">装配预演</text>
+    <text x="741" y="192" fill="#e9eff5" font-size="15.5" font-weight="700">与人工复核</text>
+    <text x="741" y="218" fill="#9db0c4" font-size="12">输出：分步工单</text>
+    <text x="741" y="238" fill="#9db0c4" font-size="12">检查项 + 确认记录</text>
+    <text x="741" y="258" fill="#9db0c4" font-size="12">动画仅为顺序示意</text>
+    <rect x="741" y="270" width="130" height="26" rx="13" fill="rgba(224,128,58,0.14)" stroke="#e0803a" stroke-opacity="0.5"/>
+    <text x="806" y="288" fill="#f6b279" font-size="12" text-anchor="middle">示意演示</text>
+  </g>
+  <g>
+    <rect x="950" y="110" width="200" height="200" rx="14" fill="#111b26" stroke="#24384c"/>
+    <text x="966" y="144" fill="#e0803a" font-size="20" font-weight="700" font-family="ui-monospace, Consolas, monospace">05</text>
+    <text x="966" y="172" fill="#e9eff5" font-size="15.5" font-weight="700">制作、档案</text>
+    <text x="966" y="192" fill="#e9eff5" font-size="15.5" font-weight="700">与反馈</text>
+    <text x="966" y="218" fill="#9db0c4" font-size="12">输出：产品档案</text>
+    <text x="966" y="238" fill="#9db0c4" font-size="12">失败与返工记录</text>
+    <text x="966" y="258" fill="#9db0c4" font-size="12">回流至材料与方案库</text>
+    <rect x="966" y="270" width="130" height="26" rx="13" fill="rgba(240,193,75,0.12)" stroke="#f0c14b" stroke-opacity="0.45"/>
+    <text x="1031" y="288" fill="#f0c14b" font-size="12" text-anchor="middle">部分演示</text>
+  </g>
+  <text x="50" y="348" fill="#9db0c4" font-size="13">闭环要点：库存变化 → 缺口重算 → 方案取舍 → 复核留痕 → 档案回流。每一步都应能被真实证据（照片、测量、检测、工单）替换。</text>
+  <text x="50" y="378" fill="#e0803a" font-size="13" font-weight="700">示例演示：本图描述的是流程设计，不代表已完成实物采集或制造。</text>
+</svg>

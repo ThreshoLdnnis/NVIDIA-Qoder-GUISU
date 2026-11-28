@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 660" width="1200" height="660" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">技术架构分层图解</title>
+  <desc id="d">技术架构自上而下分为浏览器前端、材料数据层、规则或模型服务层、设计与装配服务层、未来设备接口五层，每层右侧标注当前实现状态，前三层完全在浏览器内运行。</desc>
+  <rect width="1200" height="660" fill="#0b1118"/>
+  <text x="50" y="42" fill="#e9eff5" font-size="22" font-weight="700">技术架构分层与当前真实实现</text>
+  <text x="50" y="70" fill="#9db0c4" font-size="14">图解（自绘）· 静态站点，无账号登录、无后端服务；分层图不等于已建成的服务端系统</text>
+  <text x="60" y="112" fill="#34c39f" font-size="12.5">虚线框内 = 当前全部在浏览器内运行（规则演示，不上传数据）</text>
+  <text x="1150" y="42" fill="#e0803a" font-size="13" text-anchor="end" font-weight="700">示例演示</text>
+
+  <rect x="52" y="122" width="876" height="308" rx="14" fill="none" stroke="#34c39f" stroke-opacity="0.45" stroke-dasharray="6 6"/>
+
+  <g>
+    <rect x="60" y="130" width="860" height="86" rx="12" fill="#111b26" stroke="#24384c"/>
+    <text x="80" y="162" fill="#e9eff5" font-size="15.5" font-weight="700">1 · 浏览器前端</text>
+    <text x="80" y="188" fill="#9db0c4" font-size="12.5">护照与库存展示 · 数量调节 · 方案比较 · 装配示意预演 · 档案导出 · 响应式与键盘操作</text>
+    <rect x="940" y="156" width="210" height="34" rx="17" fill="rgba(52,195,159,0.14)" stroke="#34c39f" stroke-opacity="0.5"/>
+    <text x="1045" y="178" fill="#7ee3c4" font-size="12.5" text-anchor="middle" font-weight="700">已实现（原生 JS）</text>
+  </g>
+  <g>
+    <rect x="60" y="232" width="860" height="86" rx="12" fill="#111b26" stroke="#24384c"/>
+    <text x="80" y="264" fill="#e9eff5" font-size="15.5" font-weight="700">2 · 材料数据层</text>
+    <text x="80" y="290" fill="#9db0c4" font-size="12.5">材料护照结构 · 库存快照 · 来源状态与置信状态 · 会话内改动</text>
+    <rect x="940" y="258" width="210" height="34" rx="17" fill="rgba(240,193,75,0.12)" stroke="#f0c14b" stroke-opacity="0.45"/>
+    <text x="1045" y="280" fill="#f0c14b" font-size="12.5" text-anchor="middle" font-weight="700">示例数据</text>
+  </g>
+  <g>
+    <rect x="60" y="334" width="860" height="86" rx="12" fill="#111b26" stroke="#24384c"/>
+    <text x="80" y="366" fill="#e9eff5" font-size="15.5" font-weight="700">3 · 规则 / 模型服务层</text>
+    <text x="80" y="392" fill="#9db0c4" font-size="12.5">缺口计算 · 齐套判定 · 风险筛查提示 · 置信分级；未来才涉及识别与推荐模型</text>
+    <rect x="940" y="360" width="210" height="34" rx="17" fill="rgba(224,128,58,0.16)" stroke="#e0803a" stroke-opacity="0.55"/>
+    <text x="1045" y="382" fill="#f6b279" font-size="12.5" text-anchor="middle" font-weight="700">浏览器内规则演示</text>
+  </g>
+  <g>
+    <rect x="60" y="436" width="860" height="86" rx="12" fill="#0f1720" stroke="#24384c" stroke-dasharray="4 5"/>
+    <text x="80" y="468" fill="#e9eff5" font-size="15.5" font-weight="700">4 · 设计与装配服务层</text>
+    <text x="80" y="494" fill="#9db0c4" font-size="12.5">方案生成与排序 · 装配计划 · 几何与公差校验 · 档案版本管理（服务端部分未建设）</text>
+    <rect x="940" y="462" width="210" height="34" rx="17" fill="rgba(240,193,75,0.12)" stroke="#f0c14b" stroke-opacity="0.45"/>
+    <text x="1045" y="484" fill="#f0c14b" font-size="12.5" text-anchor="middle" font-weight="700">部分演示</text>
+  </g>
+  <g>
+    <rect x="60" y="538" width="860" height="86" rx="12" fill="#0f1720" stroke="#24384c" stroke-dasharray="4 5"/>
+    <text x="80" y="570" fill="#e9eff5" font-size="15.5" font-weight="700">5 · 未来设备接口</text>
+    <text x="80" y="596" fill="#9db0c4" font-size="12.5">切割 / 紧固 / 检测设备 · 加工参数下发 · 过程数据回流 · 异常停机与人工复核</text>
+    <rect x="940" y="564" width="210" height="34" rx="17" fill="rgba(157,176,196,0.08)" stroke="#24384c"/>
+    <text x="1045" y="586" fill="#9db0c4" font-size="12.5" text-anchor="middle" font-weight="700">未实现（仅预留）</text>
+  </g>
+
+  <g fill="#34c39f" font-size="15" text-anchor="middle">
+    <text x="490" y="227">↓</text><text x="490" y="329">↓</text><text x="490" y="431">↓</text><text x="490" y="533">↓</text>
+  </g>
+  <text x="50" y="646" fill="#e0803a" font-size="12.5">边界说明：本原型不含服务端推理、数据库与设备通信；材料数据为 data/sample-case.json 中的虚构示例，改动只写入浏览器 sessionStorage。</text>
+</svg>

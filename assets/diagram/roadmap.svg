@@ -1,0 +1,68 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 460" width="1200" height="460" font-family="Noto Sans SC, PingFang SC, Microsoft YaHei, sans-serif" role="img" aria-labelledby="t d">
+  <title id="t">四阶段研发路线图解</title>
+  <desc id="d">研发路线分为可交互原型、真实材料试点、工程验证与设备联动试点四个阶段，每个阶段下方列出验收证据类型，当前仅第一阶段进行中。</desc>
+  <rect width="1200" height="460" fill="#0b1118"/>
+  <text x="50" y="40" fill="#e9eff5" font-size="22" font-weight="700">四阶段研发路线 · 每阶段以证据通过</text>
+  <text x="50" y="68" fill="#9db0c4" font-size="14">图解（自绘）· 只有上一阶段证据齐全才进入下一阶段；证据未到位前，站点内容一律标注示例演示</text>
+  <text x="1150" y="40" fill="#e0803a" font-size="13" text-anchor="end" font-weight="700">示例演示</text>
+
+  <path d="M80 106 H1120" stroke="#24384c" stroke-width="2"/>
+  <g fill="#34c39f"><circle cx="180" cy="106" r="6"/></g>
+  <g fill="#24384c" stroke="#9db0c4" stroke-opacity="0.5"><circle cx="460" cy="106" r="5"/><circle cx="740" cy="106" r="5"/><circle cx="1020" cy="106" r="5"/></g>
+
+  <g>
+    <rect x="60" y="130" width="240" height="250" rx="14" fill="rgba(52,195,159,0.08)" stroke="#34c39f" stroke-opacity="0.6"/>
+    <text x="78" y="158" fill="#7ee3c4" font-size="12" font-weight="700">阶段 1 · 可交互原型</text>
+    <text x="78" y="182" fill="#e9eff5" font-size="12">目标：验证库存变化</text>
+    <text x="78" y="200" fill="#e9eff5" font-size="12">能否即时反馈缺口</text>
+    <text x="78" y="230" fill="#34c39f" font-size="11.5" font-family="ui-monospace, Consolas, monospace">验收证据</text>
+    <text x="78" y="250" fill="#9db0c4" font-size="11.5">· 可访问站点地址</text>
+    <text x="78" y="270" fill="#9db0c4" font-size="11.5">· 五步操作录屏</text>
+    <text x="78" y="290" fill="#9db0c4" font-size="11.5">· 导出与画面一致</text>
+    <text x="78" y="310" fill="#9db0c4" font-size="11.5">· 需求与开发截图</text>
+    <rect x="78" y="326" width="120" height="26" rx="13" fill="rgba(240,193,75,0.14)" stroke="#f0c14b" stroke-opacity="0.45"/>
+    <text x="138" y="344" fill="#f0c14b" font-size="11.5" text-anchor="middle" font-weight="700">进行中</text>
+  </g>
+  <g>
+    <rect x="340" y="130" width="240" height="250" rx="14" fill="#111b26" stroke="#24384c"/>
+    <text x="358" y="158" fill="#e9eff5" font-size="12" font-weight="700">阶段 2 · 真实材料试点</text>
+    <text x="358" y="182" fill="#e9eff5" font-size="12">目标：用一组真实</text>
+    <text x="358" y="200" fill="#e9eff5" font-size="12">旧料替换示例数据</text>
+    <text x="358" y="230" fill="#34c39f" font-size="11.5" font-family="ui-monospace, Consolas, monospace">验收证据</text>
+    <text x="358" y="250" fill="#9db0c4" font-size="11.5">· 同一组实物照片</text>
+    <text x="358" y="270" fill="#9db0c4" font-size="11.5">· measurements.csv</text>
+    <text x="358" y="290" fill="#9db0c4" font-size="11.5">· 安全筛查结论</text>
+    <text x="358" y="310" fill="#9db0c4" font-size="11.5">· 来源授权记录</text>
+    <rect x="358" y="326" width="120" height="26" rx="13" fill="rgba(157,176,196,0.08)" stroke="#24384c"/>
+    <text x="418" y="344" fill="#9db0c4" font-size="11.5" text-anchor="middle" font-weight="700">未开始</text>
+  </g>
+  <g>
+    <rect x="620" y="130" width="240" height="250" rx="14" fill="#111b26" stroke="#24384c"/>
+    <text x="638" y="158" fill="#e9eff5" font-size="12" font-weight="700">阶段 3 · 工程验证</text>
+    <text x="638" y="182" fill="#e9eff5" font-size="12">目标：验证装配计划</text>
+    <text x="638" y="200" fill="#e9eff5" font-size="12">在真实制作中成立</text>
+    <text x="638" y="230" fill="#34c39f" font-size="11.5" font-family="ui-monospace, Consolas, monospace">验收证据</text>
+    <text x="638" y="250" fill="#9db0c4" font-size="11.5">· 工单执行记录</text>
+    <text x="638" y="270" fill="#9db0c4" font-size="11.5">· 返工前后对照</text>
+    <text x="638" y="290" fill="#9db0c4" font-size="11.5">· 能耗与里程数据</text>
+    <text x="638" y="310" fill="#9db0c4" font-size="11.5">· 可复算核算报告</text>
+    <rect x="638" y="326" width="120" height="26" rx="13" fill="rgba(157,176,196,0.08)" stroke="#24384c"/>
+    <text x="698" y="344" fill="#9db0c4" font-size="11.5" text-anchor="middle" font-weight="700">未开始</text>
+  </g>
+  <g>
+    <rect x="900" y="130" width="240" height="250" rx="14" fill="#111b26" stroke="#24384c" stroke-dasharray="5 5"/>
+    <text x="918" y="158" fill="#e9eff5" font-size="12" font-weight="700">阶段 4 · 设备联动试点</text>
+    <text x="918" y="182" fill="#e9eff5" font-size="12">目标：数据驱动设备</text>
+    <text x="918" y="200" fill="#e9eff5" font-size="12">并保留人工复核</text>
+    <text x="918" y="230" fill="#34c39f" font-size="11.5" font-family="ui-monospace, Consolas, monospace">验收证据</text>
+    <text x="918" y="250" fill="#9db0c4" font-size="11.5">· 设备与运行日志</text>
+    <text x="918" y="270" fill="#9db0c4" font-size="11.5">· 参数下发记录</text>
+    <text x="918" y="290" fill="#9db0c4" font-size="11.5">· 过程数据回流</text>
+    <text x="918" y="310" fill="#9db0c4" font-size="11.5">· 安全评审与手册</text>
+    <rect x="918" y="326" width="120" height="26" rx="13" fill="rgba(157,176,196,0.08)" stroke="#24384c"/>
+    <text x="978" y="344" fill="#9db0c4" font-size="11.5" text-anchor="middle" font-weight="700">远期</text>
+  </g>
+
+  <text x="50" y="414" fill="#9db0c4" font-size="12.5">当前交付物＝阶段 1：静态站点 + 浏览器内规则演示。阶段 2—4 所需的照片、测量、工单与设备日志目前均不存在，页面不会提前声称完成。</text>
+  <text x="50" y="440" fill="#e0803a" font-size="12.5" font-weight="700">示例演示 · 路线图与证据清单为计划内容，实际进度以 evidence/ 目录中的原始资料为准。</text>
+</svg>
